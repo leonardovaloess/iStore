@@ -1,11 +1,16 @@
 import { useContext } from "react";
-import "../index.css";
 import ProductContext from "../context/ProductContext";
-import { ProductCard } from "../Components/ProductCard";
+import { useParams } from "react-router-dom";
 import ProductsList from "../Components/ProductsList";
 
-const Products = () => {
+export const CategoryPage = () => {
   const { products } = useContext(ProductContext);
+  const { category } = useParams();
+
+  const categoryProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(category)
+  );
+
   return (
     <>
       <div style={{ minHeight: "100vh" }} className="container-1">
@@ -19,13 +24,11 @@ const Products = () => {
         </div>
 
         <div className="container-2 mt-5">
-          <h1>Confira Nossos produtos</h1>
+          <h1>Confira:</h1>
 
-          <ProductsList products={products} />
+          <ProductsList products={categoryProducts} />
         </div>
       </div>
     </>
   );
 };
-
-export default Products;

@@ -5,6 +5,8 @@ const Home = () => {
   return (
     <>
       <div className="container-1">
+
+        
         <div className="img-container">
           <img
             src="https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -13,6 +15,8 @@ const Home = () => {
           />
           <h1 className="display-1">Bem Vindo!</h1>
         </div>
+
+
         <div className="container-2 mt-5 ">
           <h1>Sobre nós</h1>
           <div className="About-us-container mt-4">
@@ -48,21 +52,21 @@ const Home = () => {
               img={
                 "https://static.lojaonlinetim.com.br/desbloqueados_production/product_images/0001/7424/large.png?1636404625"
               }
-              link={"/products"}
+              link={"/category/iphone"}
             />
             <NossosProdutosCard
               name={"iPads"}
               img={
                 "https://www.atacadogames.com/imagem/tablets-e-readers/apple-ipad-10-geracao-mpq13ll-a-10-9-chip-a14-bionic-64gb-azul/2/155931.jpg?pfdrid_c=true"
               }
-              link={"/products"}
+              link={"/category/ipad"}
             />
             <NossosProdutosCard
-              name={"Macbooks/Mac"}
+              name={"macbooks/Mac"}
               img={
                 "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP854/mbp14-silver2.png"
               }
-              link={"/products"}
+              link={"/category/mac"}
             />
 
             <NossosProdutosCard
@@ -70,7 +74,7 @@ const Home = () => {
               img={
                 "https://storage.googleapis.com/fixonline/device/image/aws7.png"
               }
-              link={"/products"}
+              link={"/category/watch"}
             />
           </div>
         </div>

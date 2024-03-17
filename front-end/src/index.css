@@ -1,5 +1,6 @@
 body {
-  background-color: #e7e7e7;
+  background-color: #dadada;
+  position: relative;
 }
 
 .header-container {
@@ -37,6 +38,24 @@ body {
   gap: 1rem;
   margin-right: 2%;
   margin-top: 1rem;
+}
+
+.search-container {
+  position: absolute;
+  width: 50%;
+  background-color: #ffffff;
+  left: 25%;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+}
+.search-container div {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+}
+.search-container div p {
+  margin-top: 0.7rem;
+  font-size: large;
+  color: #202020;
 }
 
 .img-container {
@@ -116,9 +135,16 @@ body {
   .header-container h1 {
     font-size: 3rem;
   }
-  .header-container .search-input,
+  .header-container .search-input {
+    margin: auto;
+    width: 270px;
+  }
   .header-container .links-container {
     display: none;
+  }
+  .search-container {
+    width: 100%;
+    left: 0;
   }
   .container-3 {
     flex-direction: column;
