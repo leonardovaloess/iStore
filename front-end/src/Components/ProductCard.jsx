@@ -2,7 +2,6 @@ import { CardBody, CardSubtitle, Button } from "reactstrap";
 import { Link } from "react-router-dom";
 
 export const ProductCard = ({ product }) => {
-  // const [toastIsOpen, setToastIsOpen] = useState(false);
   const { _id, name, imageUrl, price } = product;
   return (
     <div key={_id}>

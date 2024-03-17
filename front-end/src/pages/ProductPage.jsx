@@ -21,9 +21,7 @@ const ProductPage = () => {
     getProduct();
   }, [id]); // Executa sempre que o id mudar
 
-  console.log(`http://localhost:3000/products/${id}`);
-  console.log(typeof id);
-  console.log(id);
+  
 
   return (
     <>

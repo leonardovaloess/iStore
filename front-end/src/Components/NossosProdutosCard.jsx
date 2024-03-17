@@ -10,8 +10,7 @@ const NossosProdutosCard = ({ img, link, name }) => {
         gap: "1rem",
         padding: "1rem",
       }}
-      onMouseEnter={() => setIsHovered(true)} // Define isHovered como true quando o mouse entra na div
-      onMouseLeave={() => setIsHovered(false)} // Define isHovered como false quando o mouse sai da div
+      
     >
       <h4>{name}</h4>
       <img

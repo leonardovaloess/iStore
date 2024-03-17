@@ -7,7 +7,8 @@ import { useEffect, useState } from "react";
 
 export default function RootLayout() {
   const [products, setProducts] = useState([]);
-
+  const [cart, setCart] = useState([])
+  
   const fetchProducts = async () => {
     try {
       const response = await axios.get("http://localhost:3000/products");
@@ -24,7 +25,7 @@ export default function RootLayout() {
   return (
     <>
       <Header />
-      <ProductContext.Provider value={{products, fetchProducts}}>
+      <ProductContext.Provider value={{products, fetchProducts, cart, setCart}}>
         <main>
           <Outlet />
         </main>
