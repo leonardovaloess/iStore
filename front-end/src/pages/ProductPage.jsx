@@ -2,10 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
+
 const ProductPage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
-
+  
   useEffect(() => {
     const getProduct = async () => {
       try {
@@ -20,8 +21,6 @@ const ProductPage = () => {
 
     getProduct();
   }, [id]); // Executa sempre que o id mudar
-
-  
 
   return (
     <>

@@ -3,12 +3,15 @@ import Header from "./Components/Header";
 import { Footer } from "./Components/Footer";
 import ProductContext from "./context/ProductContext";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { useMemo } from "react";
+import { useCart } from "./hook/useCart";
 
 export default function RootLayout() {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
+  const { cart, addItemToCart, removeProduct } = useCart()
+  
 
   const filteredProduct = useMemo(() => {
     return products.filter((product) =>
@@ -36,7 +39,7 @@ export default function RootLayout() {
         setSearch={(ev) => setSearch(ev.target.value)}
         filteredProduct={filteredProduct}
       />
-      <ProductContext.Provider value={{ products, fetchProducts }}>
+      <ProductContext.Provider value={{ products, fetchProducts, cart, addItemToCart, removeProduct}}>
         <main>
           <Outlet />
         </main>
