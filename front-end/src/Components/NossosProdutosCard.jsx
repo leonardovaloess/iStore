@@ -1,4 +1,11 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
+NossosProdutosCard.propTypes = {
+  img: PropTypes.string,
+  link: PropTypes.string,
+  name: PropTypes.string,
+};
 
 const NossosProdutosCard = ({ img, link, name }) => {
   return (
@@ -10,7 +17,6 @@ const NossosProdutosCard = ({ img, link, name }) => {
         gap: "1rem",
         padding: "1rem",
       }}
-      
     >
       <h4>{name}</h4>
       <img

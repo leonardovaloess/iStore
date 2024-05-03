@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { CardBody, CardSubtitle, Button } from "reactstrap";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
@@ -59,4 +60,13 @@ export const ProductCard = ({ product }) => {
       />
     </>
   );
+};
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+  }).isRequired,
 };

@@ -7,8 +7,8 @@ const SearchPage = () => {
   const { products } = useContext(ProductContext);
   const { search } = useParams();
 
-  const searchProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(search)
+  const searchProducts = products.filter(
+    (product) => product.name && product.name.toLowerCase().includes(search)
   );
 
   console.log(searchProducts);

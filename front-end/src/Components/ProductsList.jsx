@@ -1,4 +1,14 @@
+import PropTypes from "prop-types";
 import { ProductCard } from "./ProductCard";
+
+ProductsList.propTypes = {
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string.isRequired,
+      // Aqui você pode adicionar outras propriedades esperadas de um produto
+    })
+  ).isRequired,
+};
 
 export default function ProductsList({ products }) {
   return (
@@ -19,3 +29,4 @@ export default function ProductsList({ products }) {
     </div>
   );
 }
+

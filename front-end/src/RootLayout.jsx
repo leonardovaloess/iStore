@@ -3,8 +3,7 @@ import Header from "./Components/Header";
 import { Footer } from "./Components/Footer";
 import ProductContext from "./context/ProductContext";
 import axios from "axios";
-import {  useEffect, useState } from "react";
-import { useMemo } from "react";
+import {  useEffect, useMemo, useState } from "react";
 import { useCart } from "./hook/useCart";
 
 export default function RootLayout() {
