@@ -1,11 +1,4 @@
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-
-NossosProdutosCard.propTypes = {
-  img: PropTypes.string,
-  link: PropTypes.string,
-  name: PropTypes.string,
-};
 
 const NossosProdutosCard = ({ img, link, name }) => {
   return (

@@ -11,7 +11,7 @@ const ProductPage = () => {
     const getProduct = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/products/${id}`
+          `${import.meta.env.VITE_API_BASE_URL }/products/${id}`
         );
         setProduct(response.data);
       } catch (error) {
