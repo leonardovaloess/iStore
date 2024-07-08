@@ -24,6 +24,7 @@ export default function RootLayout() {
 
   const fetchProducts = async () => {
     try {
+      console.log(`${import.meta.env.VITE_API_BASE_URL }/products`);
       const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL }/products`);
       // Verifica se a resposta é um array antes de definir o estado
       if (Array.isArray(response.data)) {
